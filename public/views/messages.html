@@ -1,0 +1,16 @@
+<!-- public/views/messages.html -->
+
+<div class="jumbotron text-center">
+	<div ng-repeat="displayMsg in displayMessages">
+		{{displayMsg.text}}
+		{{displayMsg.username}}
+		{{displayMsg.created}}
+	</div>
+    <h1>Chat</h1>
+	<form method="post" ng-submit="submitMessage(message)">
+		<input type="text" ng-model="message.text">
+		<button type="submit"> post</button>
+	</form>
+	<!-- {{message}}
+	{{finalMessage}} -->
+</div>
